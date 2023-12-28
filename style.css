@@ -17,9 +17,9 @@ body {
   background: #7D2AE8;
 }
 
-a{
+a {
   color: #7D2AE8;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .container {
@@ -36,13 +36,16 @@ a{
 .container .input-box {
   position: relative;
 }
+
 .container .input-box .show-pass-icon {
   display: none;
 }
-.container .input-box.show .hide-pass-icon {
+
+.container .input-box .show .hide-pass-icon {
   display: none;
 }
-.container .input-box.show .show-pass-icon {
+
+.container .input-box .show .show-pass-icon {
   display: block;
 }
 
@@ -103,10 +106,10 @@ body {
 
 .container {
   position: relative;
-  max-width: 950px;
+  max-width: 1050px;
   width: 100%;
   background: #fff;
-  padding: 40px 30px;
+  padding: 20px 30px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   perspective: 2700px;
 }
@@ -279,7 +282,7 @@ body {
 
 .forms .form-content .button {
   color: #fff;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .forms .form-content .button input {
@@ -335,17 +338,31 @@ body {
   margin-right: 5px;
 }
 
+.requirement-list li .fa-square-check {
+  display: none;
+}
+
 .requirement-list li i,
-.requirement-list li span{
-  color: rgb(96, 95, 95) ;
+.requirement-list li span {
+  color: rgb(96, 95, 95);
 }
+
 .requirement-list .valid i,
-.requirement-list .valid span{
-  color: green ;
+.requirement-list .valid span {
+  color: green;
 }
+
+.requirement-list .valid .fa-square-check {
+  display: inline-block;
+}
+
+.requirement-list .valid .fa-square {
+  display: none;
+}
+
 .requirement-list .invalid i,
-.requirement-list .invalid span{
-  color: red ;
+.requirement-list .invalid span {
+  color: red;
 }
 
 @media (max-width: 730px) {
