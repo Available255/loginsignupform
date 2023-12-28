@@ -47,10 +47,24 @@ function validatePassword(password) {
 //check strength of password and applid style to element
 function passwordStrengthCheck() {
   const passwordInput = document.getElementById('password');
+  const strengthSpan = document.getElementById('strength')
 
   passwordInput.addEventListener('input', function (e) {
-    const password = this.value;
-    validatePassword(password)
+    const password = this.value ?? '';
+    const allTest = validatePassword(password);
+    const testPassedLength = allTest.filter(item => item.testPassed).length;
+    let text = '';
+    if (password.length >= 8 && testPassedLength >= 5) {
+      strengthSpan.innerHTML ='<p style="color:green;">' + 'Strong' + '</p>';
+    } else if (password.length >= 5 && testPassedLength >= 3) {
+      strengthSpan.innerHTML ='<p style="color:orange;">' + 'medium' + '</p>';
+    } else if (password.length >= 1) {
+      strengthSpan.innerHTML ='<p style="color:red;">' + 'Weak' + '</p>';
+    } else {
+      strengthSpan.innerHTML ='<p style="color:red;">' + ' ' + '</p>';
+    }
+    // strengthSpan.innerHTML ='<p style="color:red;">' + text + '</p>';
+    strengthSpan.classList.add(text.toLocaleLowerCase())
   })
 }
 

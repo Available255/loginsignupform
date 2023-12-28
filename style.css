@@ -365,6 +365,11 @@ body {
   color: red;
 }
 
+.strength{
+  height: 24px;
+  display: inline-block;
+}
+
 @media (max-width: 730px) {
   .container .cover {
     display: none;
